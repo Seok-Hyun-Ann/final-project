@@ -27,8 +27,9 @@ Mistral, LLaMa, BERT, GPT 등 다양한 모델 중에 OT 환경의 특성과 개
 데이터 수집 단계에서는 MITRE ATT&CK와 다른 오픈소스 등을 이용해 OT/ICS 환경에서 실제로 발생한 공격에 대한 정보들을 수집하며 실제 공격들이 발생했을 때, 사용된 TTPs를 중점적으로 수집한다. 데이터 수집 단계에서는 APT Reports, Ransom Reports 등의 보고서의 자연어에서 TTP를 추출하는 것이 중요하다. 지속적으로 TTP를 수집해야 하기 때문에 “TRAM:Threat Report ATT&CK Mapper, MITRE ENGENUITY”에서 2021년에 공개한 것을 적용해 향후 발생하는 TTP를 수집하려고 한다.
 
 ### 전처리 단계(Data pre-processing)
-데이터 전처리 단계에서는 실제 공격사례 기반의 데이터를 ATT&CK for ICS Matrix를 기반으로 정리할 수 있다. 이러한 정보들을 통해, 각 공격들이 사용한 전술과 기법들을 알 수 있으며, OT/ICS 환경에서 자주 사용되는 전술과 기법을 파악할 수 있다. 그림과 같이 수집한 데이터를 기반으로 OT/ICS 환경에서 실제로 발생한 Stuxnet을 MITRE ATT&CK for ICS Matrix 기반으로 정리한 것이다. 해당 정보들을 OpenAI GPT, Facebook LLaMa, Google BERT의 모델 학습 방법에 맞게 학습시켜야 한다. 
-![image](https://github.com/user-attachments/assets/4accea45-c667-4a03-9a17-e430724b129d)
+데이터 전처리 단계에서는 실제 공격사례 기반의 데이터를 ATT&CK for ICS Matrix를 기반으로 정리할 수 있다. 이러한 정보들을 통해, 각 공격들이 사용한 전술과 기법들을 알 수 있으며, OT/ICS 환경에서 자주 사용되는 전술과 기법을 파악할 수 있다. 그림과 같이 수집한 데이터를 기반으로 OT/ICS 환경에서 실제로 발생한 Stuxnet을 MITRE ATT&CK for ICS Matrix 기반으로 정리한 것이다.
+![fig 2](https://github.com/user-attachments/assets/ae576989-8616-4f60-b508-da24d83b4eb0)
+
 
 
 ### 모델링 단계(Modeling)
