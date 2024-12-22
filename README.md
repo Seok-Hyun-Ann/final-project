@@ -21,4 +21,5 @@ Mistral, LLaMa, BERT, GPT 등 다양한 모델 중에 OT 환경의 특성과 개
 
 ***
 ## 실험 과정
-![image](https://github.com/user-attachments/assets/77d1b818-1cae-4d5d-9660-ad91c69a2aa5)
+![image](https://github.com/user-attachments/assets/87c6f2e4-6a34-43af-9ed7-60978a78664d)
+
