@@ -23,16 +23,16 @@ Mistral, LLaMa, BERT, GPT 등 다양한 모델 중에 OT 환경의 특성과 개
 ## 실험 과정
 ![image](https://github.com/user-attachments/assets/8ee9d2dd-9d6c-4b83-9145-b1768b5947de)
 
-### 데이터 수집 단계(Data Collection)
+#### 1.데이터 수집 단계(Data Collection)
 데이터 수집 단계에서는 MITRE ATT&CK와 다른 오픈소스 등을 이용해 OT/ICS 환경에서 실제로 발생한 공격에 대한 정보들을 수집하며 실제 공격들이 발생했을 때, 사용된 TTPs를 중점적으로 수집한다. 데이터 수집 단계에서는 APT Reports, Ransom Reports 등의 보고서의 자연어에서 TTP를 추출하는 것이 중요하다. 지속적으로 TTP를 수집해야 하기 때문에 “TRAM:Threat Report ATT&CK Mapper, MITRE ENGENUITY”에서 2021년에 공개한 것을 적용해 향후 발생하는 TTP를 수집하려고 한다.
 
-### 전처리 단계(Data pre-processing)
+#### 2.전처리 단계(Data pre-processing)
 데이터 전처리 단계에서는 실제 공격사례 기반의 데이터를 ATT&CK for ICS Matrix를 기반으로 정리할 수 있다. 이러한 정보들을 통해, 각 공격들이 사용한 전술과 기법들을 알 수 있으며, OT/ICS 환경에서 자주 사용되는 전술과 기법을 파악할 수 있다. 그림과 같이 수집한 데이터를 기반으로 OT/ICS 환경에서 실제로 발생한 Stuxnet을 MITRE ATT&CK for ICS Matrix 기반으로 정리한 것이다.
 ![fig 2](https://github.com/user-attachments/assets/ae576989-8616-4f60-b508-da24d83b4eb0)
 
 
 
-### 모델링 단계(Modeling)
+#### 3.모델링 단계(Modeling)
  모델링 단계에서는 pre-trained된 LLaMa 3 8B 모델을 파인튜닝(Fine tuning)을 진행한다. 모델은 전술과 기법이 포함된 데이터를 통해 공격자의 패턴과 구조를 파악하여 다음에 일어날 공격에 대해 예측할 수 있도록 한다. 이러한 결과로 방어자(사용자)는 예측의 결과를 통해 다음에 일어날 공격에 대해 방어할 수 있으며, 공격자의 의도를 파악하고 공격에 대한 피해를 최소화할 수 있다. 다음은 방어자와 모델의 질문 및 답변의 예시이다.
 - User: Please tell me about techniques that may occur in PLC.
 - Model : Techniques that can occur in PLC are as follows. Replication Through Removable Media, Supply Chain Compromise, Rogue Master, etc.
